@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InternTrack | Internship & Placement Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast"></div>
+
+  <section id="loginPage" class="login-page">
+    <div class="login-card">
+      <div class="brand">Intern<span>Track</span></div>
+      <p class="muted">Student Internship & Placement Management System</p>
+      <form id="loginForm">
+        <label>Student Name</label>
+        <input id="studentName" type="text" placeholder="Enter your name" required>
+        <label>Email</label>
+        <input id="studentEmail" type="email" placeholder="student@example.com" required>
+        <button class="primary-btn" type="submit">Login to Dashboard</button>
+      </form>
+      <p class="demo-note">Demo project • No real account required</p>
+    </div>
+  </section>
+
+  <section id="app" class="hidden">
+    <header class="topbar">
+      <div class="brand">Intern<span>Track</span></div>
+      <div class="user-area">
+        <span id="welcomeUser"></span>
+        <button id="logoutBtn" class="outline-btn">Logout</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">STUDENT PORTAL</p>
+          <h1>Find your next opportunity.</h1>
+          <p>Discover internships, apply quickly and track every application from one dashboard.</p>
+        </div>
+        <div class="hero-badge">2027 Batch</div>
+      </div>
+
+      <section class="stats">
+        <div class="stat-card"><span>Available</span><strong id="availableCount">0</strong></div>
+        <div class="stat-card"><span>Applied</span><strong id="appliedCount">0</strong></div>
+        <div class="stat-card"><span>Shortlisted</span><strong id="shortlistedCount">0</strong></div>
+        <div class="stat-card"><span>Selected</span><strong id="selectedCount">0</strong></div>
+      </section>
+
+      <section class="toolbar">
+        <div class="search-wrap">
+          <input id="searchInput" type="text" placeholder="Search by role, company or skill...">
+        </div>
+        <select id="modeFilter">
+          <option value="All">All modes</option>
+          <option value="Remote">Remote</option>
+          <option value="Hybrid">Hybrid</option>
+          <option value="On-site">On-site</option>
+        </select>
+        <select id="domainFilter">
+          <option value="All">All domains</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Full Stack">Full Stack</option>
+          <option value="Testing">Testing</option>
+          <option value="Python">Python</option>
+        </select>
+      </section>
+
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">OPPORTUNITIES</p>
+          <h2>Internship Opportunities</h2>
+        </div>
+        <span id="resultCount"></span>
+      </div>
+
+      <section id="internshipGrid" class="internship-grid"></section>
+
+      <section class="applications">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">TRACKING</p>
+            <h2>My Applications</h2>
+          </div>
+        </div>
+        <div id="applicationList"></div>
+      </section>
+    </main>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

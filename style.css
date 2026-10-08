@@ -1,0 +1,35 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#3157d5;--dark:#172033;--muted:#6b7280;--bg:#f5f7fb;--card:#fff;--border:#e5e7eb}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--dark);min-height:100vh}
+.hidden{display:none!important}
+.login-page{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#eef2ff,#f8fafc)}
+.login-card{width:min(430px,100%);background:#fff;padding:38px;border-radius:22px;box-shadow:0 20px 60px #17203318}
+.brand{font-size:27px;font-weight:800;letter-spacing:-1px}.brand span{color:var(--primary)}
+.muted,.demo-note{color:var(--muted);font-size:14px;line-height:1.5}
+.login-card>.muted{margin:8px 0 26px}
+.login-card label{display:block;font-size:13px;font-weight:700;margin:15px 0 7px}
+input,select{width:100%;border:1px solid var(--border);background:#fff;border-radius:10px;padding:12px 13px;font-size:14px;outline:none}
+input:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 3px #3157d515}
+.primary-btn,.outline-btn,.apply-btn{border:0;border-radius:10px;padding:12px 17px;font-weight:700;cursor:pointer}
+.primary-btn{width:100%;background:var(--primary);color:#fff;margin-top:20px}.primary-btn:hover,.apply-btn:hover{opacity:.9}
+.demo-note{text-align:center;margin-top:18px;font-size:12px}
+.topbar{height:72px;background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100% - 1160px)/2))}
+.user-area{display:flex;align-items:center;gap:14px;font-size:14px}.outline-btn{background:#fff;border:1px solid var(--border)}
+.container{width:min(1160px,calc(100% - 32px));margin:28px auto 60px}
+.hero{background:linear-gradient(120deg,#18244a,#3157d5);color:#fff;border-radius:22px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.eyebrow{font-size:11px;letter-spacing:1.5px;font-weight:800;color:#6b7280;margin-bottom:7px}.hero .eyebrow{color:#cbd5ff}
+.hero h1{font-size:34px;margin-bottom:9px}.hero p{max-width:680px;line-height:1.55;color:#e7ebff}
+.hero-badge{border:1px solid #ffffff45;background:#ffffff16;padding:12px 17px;border-radius:30px;font-weight:700;white-space:nowrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:18px 0}
+.stat-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:19px}.stat-card span{font-size:12px;color:var(--muted)}.stat-card strong{display:block;font-size:27px;margin-top:6px}
+.toolbar{display:grid;grid-template-columns:1fr 180px 180px;gap:12px;margin:24px 0}.search-wrap input{height:44px}
+.section-title{display:flex;align-items:end;justify-content:space-between;margin:25px 0 14px}.section-title h2{font-size:22px}.section-title>span{color:var(--muted);font-size:13px}
+.internship-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.job-card{background:#fff;border:1px solid var(--border);border-radius:17px;padding:20px;display:flex;flex-direction:column;min-height:250px;transition:.2s}.job-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #1720330d}
+.job-top{display:flex;justify-content:space-between;gap:10px}.company-logo{width:42px;height:42px;border-radius:11px;background:#eef2ff;color:var(--primary);display:grid;place-items:center;font-weight:800}
+.job-card h3{font-size:17px;margin-top:17px}.company{color:var(--muted);font-size:13px;margin-top:5px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}.tag{background:#f1f5f9;color:#475569;border-radius:20px;padding:5px 8px;font-size:11px}.job-footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}.stipend{font-size:12px;font-weight:700}.apply-btn{background:var(--primary);color:#fff}.apply-btn:disabled{background:#d1d5db;cursor:not-allowed}
+.applications{margin-top:42px}.application-row{background:#fff;border:1px solid var(--border);border-radius:13px;padding:15px 18px;display:grid;grid-template-columns:1fr 160px 120px;gap:12px;align-items:center;margin-bottom:9px}.application-row .role{font-weight:700}.application-row small{display:block;color:var(--muted);margin-top:4px}.status{display:inline-block;padding:6px 9px;border-radius:20px;background:#eef2ff;color:var(--primary);font-size:11px;font-weight:700;text-align:center}
+.empty{grid-column:1/-1;background:#fff;border:1px dashed var(--border);padding:35px;text-align:center;color:var(--muted);border-radius:15px}
+#toast{position:fixed;right:20px;bottom:20px;z-index:10;background:#172033;color:#fff;padding:13px 17px;border-radius:10px;font-size:13px;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none}#toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.internship-grid{grid-template-columns:1fr 1fr}.toolbar{grid-template-columns:1fr 1fr}.search-wrap{grid-column:1/-1}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.hero{padding:25px;display:block}.hero h1{font-size:27px}.hero-badge{display:inline-block;margin-top:18px}.internship-grid{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.topbar{padding:0 16px}.user-area span{display:none}.application-row{grid-template-columns:1fr}.container{width:min(100% - 20px,1160px)}}
